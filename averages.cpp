@@ -3,7 +3,7 @@
  *	Created: 1-18-12
  *	Edited: 1-18-12
  *	It is used to calculate averages to algebra scores c:
- *	v.0.1 (alpha software)
+ *	v.0.2 (alpha software)
  */
 
 #include <iostream>
