@@ -21,6 +21,7 @@ void calculateAverages();
 int algebraScores[ARRAY_SIZE];
 float weeklyAverage;
 
+// This class calculates the score of the users algebra lesson
 class algebraAverage {
 	double correctProblems, incorrectProblems;
 
@@ -28,7 +29,6 @@ class algebraAverage {
 		void calculateScore (double,double);
 		int finalScore() {
 			double numberNeedingRounding = ((correctProblems/incorrectProblems)+0.005)*100;
-//			roundUp(numberNeedingRounding);
 			return (numberNeedingRounding);}
 };
 
@@ -40,6 +40,7 @@ void algebraAverage::calculateScore (double userInput_correctProblems_calculated
 int main() {
     int menuSelection;
 
+//	The main menu of the program
     while (true) {
     	cout << " Main Menu\n" << "___________\n\n" << "1) I already have my lessons scores\n" << "2) I need to figure out what my scores are\n\n" << "Enter your selection: ";
         cin >> menuSelection;
@@ -61,6 +62,7 @@ int main() {
 }
 
 void inputAverages() {
+//	Inputting the scores to get the averages
     for (int i = 0; i < ARRAY_SIZE; i++)
     {
 		cout << "\nEnter your score for day " << i+1 << " of 5: ";
@@ -73,6 +75,7 @@ void inputScores() {
    	algebraAverage userInput_combined;
    	double userInput_correctProblems, userInput_incorrectProblems;
 
+//	Inputting problem counts to get the score
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		cout << "\nThis is for day " << i+1 << "\n";
@@ -88,6 +91,7 @@ void inputScores() {
 }
 
 void calculateAverages() {
+//	Calculating the average of entered scores from above
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		weeklyAverage = weeklyAverage + algebraScores[i];
